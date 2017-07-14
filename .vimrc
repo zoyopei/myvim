@@ -23,16 +23,26 @@ set cursorline
 " set cursorcolumn
 highlight CursorLine   cterm=bold
 
+set backup
+set backupext=.bak
+"set patchmode=.orig
+set directory=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
+set backupdir=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
+
 let mapleader="\<Space>"
-" inoremap <C-h> <Left>
-" inoremap <C-j> <Down>
-" inoremap <C-k> <Up>
-" inoremap <C-l> <Right>
-" inoremap <A-d> <DELETE>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+inoremap <C-d> <DELETE>
+
+nmap ,v "+p
+vmap ,c "+yy
+nmap ,c "+yy
 
 " ctags
-set tags=tags
-map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"set tags=tags
+"map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 
 " Bundle
@@ -108,12 +118,29 @@ let g:cpp_concepts_highlight = 1
 
 " ctrlsf
 Plugin 'dyng/ctrlsf.vim'
+let g:ctrlsf_ackprg = '/home/peizhaoyou/tools/bin/ag'
+let g:ctrlsf_ignore_dir = ['tags', '.git', 'GTAGS', 'GPATH', 'GRTAGS']
+let g:ctrlsf_default_root = 'project+fw'
+let g:ctrlsf_case_sensitive = 'yes'
 
 " YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 source ~/.vimrc_ycm
+"Plugin 'rdnetto/YCM-Generator'
+
+"Plugin 'justmao945/vim-clang'
+"let g:clang_c_options = '-std=gnu11'
+"let g:clang_cpp_options = '-std=c++14 -stdlib=libc++'
+"let g:clang_compilation_database = './build'
 
 " neocomplete
 " Plugin 'Shougo/neocomplete.vim'
 " source ~/.vimrc_neo
 
+Plugin 'gtags.vim'
+set cscopetag
+set cscopeprg='gtags-cscope'
+cs add GTAGS
+let GtagsCscope_Auto_Load = 1
+let CtagsCscope_Auto_Map = 1
+let GtagsCscope_Quiet = 1
