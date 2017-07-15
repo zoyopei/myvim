@@ -26,8 +26,8 @@ highlight CursorLine   cterm=bold
 set backup
 set backupext=.bak
 "set patchmode=.orig
-set directory=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
-set backupdir=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
+set directory=~/.vim-tmp
+set backupdir=~/.vim-tmp
 
 let mapleader="\<Space>"
 inoremap <C-h> <Left>
@@ -118,7 +118,8 @@ let g:cpp_concepts_highlight = 1
 
 " ctrlsf
 Plugin 'dyng/ctrlsf.vim'
-let g:ctrlsf_ackprg = '/home/peizhaoyou/tools/bin/ag'
+" silversearcher-ag
+let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_ignore_dir = ['tags', '.git', 'GTAGS', 'GPATH', 'GRTAGS']
 let g:ctrlsf_default_root = 'project+fw'
 let g:ctrlsf_case_sensitive = 'yes'
@@ -138,6 +139,7 @@ source ~/.vimrc_ycm
 " source ~/.vimrc_neo
 
 Plugin 'gtags.vim'
+" global
 set cscopetag
 set cscopeprg='gtags-cscope'
 cs add GTAGS
