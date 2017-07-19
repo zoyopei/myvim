@@ -30,11 +30,17 @@ set directory=~/.vim-tmp
 set backupdir=~/.vim-tmp
 
 let mapleader="\<Space>"
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-d> <DELETE>
+inoremap <C-k> <ESC>
+inoremap <M-h> <Left>
+inoremap <M-j> <Down>
+inoremap <M-k> <Up>
+inoremap <M-l> <Right>
+inoremap <M-d> <DELETE>
+inoremap ˙ <Left>
+inoremap ∆ <Down>
+inoremap ˚ <Up>
+inoremap ¬ <Right>
+inoremap ∂ <DELETE>
 
 nmap ,v "+p
 vmap ,c "+yy
@@ -118,8 +124,7 @@ let g:cpp_concepts_highlight = 1
 
 " ctrlsf
 Plugin 'dyng/ctrlsf.vim'
-" silversearcher-ag
-let g:ctrlsf_ackprg = 'ag'
+let g:ctrlsf_ackprg = '/home/peizhaoyou/tools/bin/ag'
 let g:ctrlsf_ignore_dir = ['tags', '.git', 'GTAGS', 'GPATH', 'GRTAGS']
 let g:ctrlsf_default_root = 'project+fw'
 let g:ctrlsf_case_sensitive = 'yes'
@@ -139,7 +144,6 @@ source ~/.vimrc_ycm
 " source ~/.vimrc_neo
 
 Plugin 'gtags.vim'
-" global
 set cscopetag
 set cscopeprg='gtags-cscope'
 cs add GTAGS
