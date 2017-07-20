@@ -124,7 +124,7 @@ let g:cpp_concepts_highlight = 1
 
 " ctrlsf
 Plugin 'dyng/ctrlsf.vim'
-let g:ctrlsf_ackprg = '/home/peizhaoyou/tools/bin/ag'
+let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_ignore_dir = ['tags', '.git', 'GTAGS', 'GPATH', 'GRTAGS']
 let g:ctrlsf_default_root = 'project+fw'
 let g:ctrlsf_case_sensitive = 'yes'
