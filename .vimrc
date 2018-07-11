@@ -14,6 +14,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
+set encoding=utf-8
 
 syntax on
 syntax enable
@@ -26,20 +27,27 @@ highlight CursorLine   cterm=bold
 set backup
 set backupext=.bak
 "set patchmode=.orig
-set directory=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
-set backupdir=~/.vim-tmp,~/.vim-tmp/1,~/vim-tmp/2,~/vim-tmp/3,~/vim-tmp/4
+set directory=~/.vim-tmp
+set backupdir=~/.vim-tmp
 
 let mapleader="\<Space>"
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
-inoremap <C-d> <DELETE>
+inoremap <C-k> <ESC>
+inoremap <M-h> <Left>
+inoremap <M-j> <Down>
+inoremap <M-k> <Up>
+inoremap <M-l> <Right>
+inoremap <M-d> <DELETE>
+inoremap ˙ <Left>
+inoremap ∆ <Down>
+inoremap ˚ <Up>
+inoremap ¬ <Right>
+inoremap ∂ <DELETE>
 
 nmap ,v "+p
 vmap ,c "+yy
 nmap ,c "+yy
 
+nmap <C-L><C-L> :set invrelativenumber<CR>
 " ctags
 "set tags=tags
 "map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -118,7 +126,7 @@ let g:cpp_concepts_highlight = 1
 
 " ctrlsf
 Plugin 'dyng/ctrlsf.vim'
-let g:ctrlsf_ackprg = '/home/peizhaoyou/tools/bin/ag'
+let g:ctrlsf_ackprg = 'ag'
 let g:ctrlsf_ignore_dir = ['tags', '.git', 'GTAGS', 'GPATH', 'GRTAGS']
 let g:ctrlsf_default_root = 'project+fw'
 let g:ctrlsf_case_sensitive = 'yes'
@@ -144,3 +152,11 @@ cs add GTAGS
 let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
+
+Plugin 'kana/vim-fakeclip'
+
+Plugin 'davidhalter/jedi-vim'
+py << EOF
+sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/tools/ptest')
+sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/test-common/functiontest/testlib')
+EOF
