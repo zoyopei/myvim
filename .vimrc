@@ -83,6 +83,7 @@ Plugin 'ervandew/supertab'
 
 " minibufexpl
 Plugin 'fholgado/minibufexpl.vim'
+let g:miniBufExplorerAutoStart = 0
 
 " airline
 Plugin 'vim-airline/vim-airline'
@@ -155,8 +156,14 @@ let GtagsCscope_Quiet = 1
 
 Plugin 'kana/vim-fakeclip'
 
+Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-conflicted'
+"let g:diffget_local_map = 'gl'
+"let g:diffget_upstream_map = 'gu'
+"set stl+=%{ConflictedVersion()}
+
 Plugin 'davidhalter/jedi-vim'
-py << EOF
-sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/tools/ptest')
-sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/test-common/functiontest/testlib')
-EOF
+"py << EOF
+"sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/tools/ptest')
+"sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/test-common/functiontest/testlib')
+"EOF
