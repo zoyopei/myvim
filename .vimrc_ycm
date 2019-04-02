@@ -14,6 +14,7 @@ let g:ycm_filetype_blacklist = {
 \ 'nerdtree' : 1,
 \}
 let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_max_diagnostics_to_display = 0
 
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
