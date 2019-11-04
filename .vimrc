@@ -27,8 +27,8 @@ highlight CursorLine   cterm=bold
 set backup
 set backupext=.bak
 "set patchmode=.orig
-set directory=~/.vim-tmp
-set backupdir=~/.vim-tmp
+set directory=~/.vim/tmp
+set backupdir=~/.vim/tmp
 
 let mapleader="\<Space>"
 inoremap <C-k> <ESC>
@@ -133,8 +133,8 @@ let g:ctrlsf_default_root = 'project+fw'
 let g:ctrlsf_case_sensitive = 'yes'
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
-source ~/.vimrc_ycm
+"Plugin 'Valloric/YouCompleteMe'
+"source ~/.vimrc_ycm
 "Plugin 'rdnetto/YCM-Generator'
 
 "Plugin 'justmao945/vim-clang'
@@ -154,15 +154,15 @@ let GtagsCscope_Auto_Load = 1
 let CtagsCscope_Auto_Map = 1
 let GtagsCscope_Quiet = 1
 
-Plugin 'kana/vim-fakeclip'
+"Plugin 'kana/vim-fakeclip'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'christoomey/vim-conflicted'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'christoomey/vim-conflicted'
 "let g:diffget_local_map = 'gl'
 "let g:diffget_upstream_map = 'gu'
 "set stl+=%{ConflictedVersion()}
 
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 "py << EOF
 "sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/tools/ptest')
 "sys.path.insert(0, '/home/peizhaoyou/ml_system/pico/test-common/functiontest/testlib')
